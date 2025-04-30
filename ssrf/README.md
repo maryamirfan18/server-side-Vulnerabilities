@@ -34,3 +34,10 @@ http://localhost/admin<br>
 Now, the server sends a request to its own admin panel, thinking it's safe.<br>
 This can bypass access controls and give the attacker unauthorized admin access.<br>
 
+## Why Servers Trust Local Requests
+Servers may trust requests from localhost (127.0.0.1) because:<br>
+-Access checks are done by another component (like a firewall).<br>
+-Admin access is allowed from the local machine for recovery.<br>
+-Admin panels run on internal ports, not meant for public use.<br>
+This trust makes SSRF attacks dangerous, as they can bypass security and access sensitive areas.<br>
+
