@@ -21,3 +21,16 @@ Now the server tries to open its own admin page, which the hacker normally could
 -Read sensitive files or internal APIs.<br>
 -Sometimes escalate to Remote Code Execution (RCE).<br>
 
+# SSRF Attack Against the Server (Loopback Attack)
+In this type of SSRF, the attacker tricks the server into making a request to itself using the localhost or 127.0.0.1 address.
+
+### Example:
+The server is supposed to fetch stock info from:<br>
+http://stock.weliketoshop.net:8080/...<br>
+
+But the attacker changes it to:<br>
+http://localhost/admin<br>
+
+Now, the server sends a request to its own admin panel, thinking it's safe.<br>
+This can bypass access controls and give the attacker unauthorized admin access.<br>
+
