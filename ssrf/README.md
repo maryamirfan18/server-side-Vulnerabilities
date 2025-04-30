@@ -10,11 +10,11 @@ SSRF (Server-Side Request Forgery) is a security flaw that lets a hacker trick a
 ### Example:
 A website lets you enter a URL to "fetch" an image:
 
-https://example.com/fetch?url=http://example.org/image.jpg
-A hacker changes the URL to:
+https://example.com/fetch?url=http://example.org/image.jpg <br>
+A hacker changes the URL to:<br>
 
-https://example.com/fetch?url=http://localhost:8080/admin
-Now the server tries to open its own admin page, which the hacker normally couldn’t reach from the outside.
+https://example.com/fetch?url=http://localhost:8080/admin <br>
+Now the server tries to open its own admin page, which the hacker normally couldn’t reach from the outside. <br> 
 
 ## What can happen with SSRF?
 -Access to internal IPs and services (e.g., 127.0.0.1 or cloud metadata URLs).
