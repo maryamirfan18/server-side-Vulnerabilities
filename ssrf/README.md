@@ -1,7 +1,7 @@
-What is SSRF?
+# What is SSRF?
 SSRF (Server-Side Request Forgery) is a security flaw that lets a hacker trick a website's server into making a request — either to itself, to another internal system, or to an outside system the hacker controls.
 
-Why is that bad?
+## Why is that bad?
 The hacker uses the server like a puppet.
 
 The server may access internal systems that are not meant to be public.
