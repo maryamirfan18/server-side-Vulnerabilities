@@ -13,8 +13,6 @@ This project explores common server-side vulnerabilities and their mitigations. 
   - [OS Command Injection](#6-os-command-injection)
   - [SQL Injection](#7-sql-injection)
 - [PortSwigger Labs Solutions](#portswigger-labs-solutions)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Vulnerabilities Covered
 
