@@ -41,3 +41,21 @@ Servers may trust requests from localhost (127.0.0.1) because:<br>
 -Admin panels run on internal ports, not meant for public use.<br>
 This trust makes SSRF attacks dangerous, as they can bypass security and access sensitive areas.<br>
 
+# SSRF attacks against other back-end systems
+
+Some websites let users make the server fetch data from a URL — like checking stock from an API.
+
+If that URL can be changed, an attacker can make the server fetch internal systems (like `http://192.168.0.68/admin`) that the attacker can't reach directly.
+
+---
+
+## Example Attack
+
+```http
+POST /product/stock HTTP/1.0
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 38
+
+stockApi=http://192.168.0.68/admin
+```
+✅ If the server responds with content from that internal page, the attacker can access admin tools or sensitive data.
