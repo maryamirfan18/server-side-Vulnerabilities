@@ -1,4 +1,3 @@
-# server-side-Vulnerabilities
 # Server-Side Vulnerabilities
 
 This project explores common server-side vulnerabilities and their mitigations. It also contains solutions for challenges from **PortSwigger Labs**, providing a hands-on approach to web application security.
